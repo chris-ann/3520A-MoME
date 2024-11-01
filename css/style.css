@@ -38,6 +38,7 @@ header {
     align-items: center;
 }
 
+
 .full-page main {
     flex-grow: 1;
 }
@@ -47,7 +48,20 @@ section {
 }
 
 footer {
+    padding: 50px 50px 20px;
     text-align: center;
+}
+footer hr {
+    border-color: black;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .purple-bkg {
@@ -128,12 +142,20 @@ model-viewer {
     grid-column: span 2;
     grid-row: span 2;
 }
+.logo {
+    width: 20vw;
+    min-width: 150px;
+}
+.primary-nav {
+    width: 20vw;
 
+}
 .primary-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-end;
     gap: 20px;
 }
 
@@ -143,6 +165,16 @@ model-viewer {
 
 .primary-nav a.active {
     text-decoration: underline;
+}
+
+.date {
+    width: 170px;
+}
+.date p {
+    margin: 0;
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    padding: 5px 20px;
 }
 
 @media screen and (max-width: 850px) {
@@ -155,7 +187,39 @@ model-viewer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+@media screen and (max-width: 610px) {
+    section {
+        padding: 50px 30px;
+    }
 
+    header {
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .date {
+        grid-column: 1/ span 2;
+        grid-row: 2;
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        background: black;
+        color: white;
+    }
+    .date p {
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+        padding: 0 20px;
+    }
+    .primary-nav {
+        grid-column: 2;
+        width: 100%;
+        grid-row: 1;
+    }
+    footer {
+        padding: 20px 30px 10px;
+    }
+}
 @media screen and (max-width: 550px) {
     .grid-parent {
         grid-template-columns: 1fr 1fr;
